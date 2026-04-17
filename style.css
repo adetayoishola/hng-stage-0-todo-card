@@ -17,70 +17,68 @@ body {
 .todo-card {
   background-color: white;
   width: 100%;
-  max-width: 420px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 460px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
   overflow: hidden;
 }
 
+/* Header */
 .card-header {
   background: linear-gradient(135deg, #4f46e5, #7c3aed);
   color: white;
-  padding: 25px;
+  padding: 28px 25px;
 }
 
 .card-header h2 {
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   font-weight: 700;
 }
 
+/* Body */
 .card-body {
   padding: 25px;
 }
 
 .description {
   color: #555;
-  line-height: 1.6;
+  line-height: 1.65;
   margin-bottom: 20px;
 }
 
+/* Priority & Status */
 .info-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
-.priority {
-  padding: 6px 16px;
-  background-color: #fee2e2;
-  color: #ef4444;
-  border-radius: 20px;
+.priority, .status {
+  padding: 8px 18px;
+  border-radius: 25px;
   font-size: 0.9rem;
   font-weight: 600;
 }
 
-.status {
-  padding: 6px 16px;
-  background-color: #d1fae5;
-  color: #10b981;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
+.priority { background-color: #fee2e2; color: #ef4444; }
+.status { background-color: #d1fae5; color: #10b981; }
 
-.due-date, .time-remaining {
-  margin-bottom: 15px;
+/* Due Date & Time */
+.due-date {
+  margin-bottom: 12px;
+  color: #374151;
+  font-weight: 500;
 }
 
 .time-remaining {
-  padding: 12px 20px;
+  padding: 14px 20px;
   border-radius: 12px;
   font-weight: 600;
-  background-color: #fef3c7;
-  color: #d97706;
+  margin-bottom: 20px;
 }
 
+/* Tags */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -89,26 +87,70 @@ body {
 }
 
 .tag {
-  padding: 5px 14px;
+  padding: 6px 16px;
   background-color: #e0e7ff;
   color: #4f46e5;
-  border-radius: 20px;
+  border-radius: 30px;
   font-size: 0.85rem;
 }
 
+/* Checkbox */
 .checkbox-container {
-  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 input[type="checkbox"] {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   accent-color: #4f46e5;
 }
 
+/* Status Control */
+.status-control {
+  margin-bottom: 20px;
+}
+
+.status-control label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.status-control select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+}
+
+/* Expand Button */
+.expand-btn {
+  background: none;
+  border: none;
+  color: #4f46e5;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-bottom: 10px;
+}
+
+/* Collapsible */
+.collapsible {
+  display: none;
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Action Buttons */
 .actions {
   display: flex;
   gap: 12px;
+  margin-bottom: 20px;
 }
 
 button {
@@ -118,6 +160,7 @@ button {
   border-radius: 12px;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .edit-btn {
@@ -130,14 +173,63 @@ button {
   color: #ef4444;
 }
 
-.completed {
-  text-decoration: line-through;
-  opacity: 0.7;
+button:hover {
+  transform: translateY(-2px);
 }
 
+/* Edit Form */
+.edit-form {
+  margin-top: 15px;
+  padding: 20px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  display: none;
+}
 
+.edit-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.edit-form input,
+.edit-form textarea,
+.edit-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.edit-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.form-actions button {
+  padding: 12px 20px;
+}
+
+/* Completed State */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.75;
+}
+
+/* Responsive */
 @media (max-width: 480px) {
   .todo-card {
     margin: 10px;
+    border-radius: 16px;
   }
 }
