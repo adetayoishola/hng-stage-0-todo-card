@@ -1,21 +1,19 @@
-# HNG Stage 0 - Todo Item Card
+# HNG Internship - Stage 1a: Advanced Todo Card
 
-A clean and responsive Todo Card built for HNG Frontend Stage 0.
+This is an improved version of my Stage 0 Todo Card with added interactivity as required for Stage 1a.
 
-## Features
-- Fully responsive design
-- Dynamic time remaining calculation
-- Interactive checkbox (strikes through title)
-- Edit and Delete buttons
-- All required `data-testid` attributes
-
-## Live Demo
-https://hng-stage-0-todo-card-gamma.vercel.app/
+## Features Added in Stage 1a
+- Full Edit Mode (Title, Description, Priority, Due Date)
+- Status Control Dropdown
+- Expand/Collapse for long description
+- Dynamic Time Remaining
+- Checkbox & Status synchronization
+- All required data-testid attributes
 
 ## Technologies
 - HTML5
 - CSS3
 - Vanilla JavaScript
 
-## Author
-Adetayo - HNG Frontend Track
+
+Built by Adetayo (HNG Frontend Track)
